@@ -1,8 +1,6 @@
 function printTriangle() {
-    var i = 0
-    var size = 5
-    while (i < size+1) {
-        console.log(" ".repeat(size-i), " #".repeat(i))
-        i++
-    }
+	var size = 5
+	for (var i = 0; i < (size + 1); i++) {
+	   console.log(" ".repeat(size-i), " #".repeat(i))
+	}
 }
