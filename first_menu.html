@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Menu</title>
+    
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;subset=cyrillic" rel="stylesheet">
+    
+    <style>
+        nav {background: #CCCCCC;
+            width: 358px;
+            height: 198px;
+            border: 1px solid #000000;
+            box-sizing: border-box;
+            box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.25);
+            border-radius: 10px;}
+        
+        div a {display: flex;
+            flex-direction: column;
+            position: relative;
+            color: #000000;
+            font-family: "Roboto";
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 16px;
+            text-decoration: none;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 10px;
+            padding-bottom: 10px;}
+        
+        div a:hover {background: #9C9C9C; position: relative;}
+        
+        div a:active {color: #FFFFFF;
+            text-shadow: #000000;}
+        
+        .first a:hover {border-radius: 10px 10px 0px 0px;}
+        
+        .last a:hover {border-radius: 0px 0px 10px 10px;}
+
+    </style>
+    
+</head>
+
+<body>
+
+    <nav>
+        <div class="first"><a href="./first_menu.html">Элемент меню</a></div>
+        <div><a href="./first_menu.html">Элемент меню с наведением</a></div>
+        <div><a href="./first_menu.html">Еще один элемент, у которого очень длинный текст</a></div>
+        <div><a href="./first_menu.html">Еще один элемент</a></div>
+        <div class="last"><a href="./first_menu.html">Еще один элемент</a></div>
+    </nav>
+
+</body>
+
+</html>
