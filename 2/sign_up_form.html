@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sign up form</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;subset=cyrillic" rel="stylesheet">
+
+    <style>
+        form {font-family: "Roboto";
+            background: #9C9C9C;
+            border: 2px solid #626262;
+            border-radius: 3px;
+            width: 400px;
+            height: 448px;}
+
+        input {border: 1px solid #9C9C9C;
+            box-sizing: border-box;
+            border-radius: 3px;
+            padding-left: 10px;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: normal;}
+        input:focus {outline: none;}
+        input::-webkit-input-placeholder {color: #CCCCCC;}
+        input::-moz-placeholder {color: #CCCCCC;}
+
+        .title {font-style: normal;
+            font-weight: 500;
+            font-size: 32px;
+            line-height: 37px;
+            padding-top: 20px;
+            margin-left: 20px;}
+
+        hr {color: #C4C4C4;
+            margin-top: 20px;}
+
+        .label {margin-top: 20px;
+            margin-bottom: 5px;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 16px;
+            color: #3A3A3A;
+            margin-left: 20px;}
+
+        .big_input {margin-left: 20px;}
+        .big_input input {width: 360px;
+            height: 28px;}
+        .big_input input:valid {border: 2px solid rgb(73,243,13);}
+        .big_input input:invalid:not(:placeholder-shown) {border: 2px solid rgb(247,37,9);}
+
+        .small_input {display: inline-block;}
+        .small_input input {margin-left: 20px;
+            width: 175px;
+            height: 28px;}
+        .small_input input:valid {border: 2px solid rgb(73,243,13);}
+        .small_input input:invalid:not(:placeholder-shown) {border: 2px solid rgb(247,37,9);}
+
+        .reenter_pass {display: inline-block;}
+        .reenter_pass input {margin-left: 6px;
+            width: 175px;
+            height: 28px;}
+        .reenter_pass input:valid {border: 2px solid rgb(73,243,13);}
+        .reenter_pass input:invalid:not(:placeholder-shown) {border: 2px solid rgb(247,37,9);}
+        .reenter_pass .label {margin-left: 6px;}
+
+        .send {display: inline-block;}
+        .send input {width: 95px;
+            height: 32px;
+            background: #616161;
+            border: 1px solid #616161;
+            margin-left: 20px;
+            margin-top: 10px;
+            color: #CCCCCC;}
+        .send input:hover {text-decoration: underline;}
+
+        .cancel {display: inline-block;}
+        .cancel input {width: 74px;
+            height: 32px;
+            background: #CCCCCC;
+            border: 1px solid #CCCCCC;
+            color: #616161;
+            margin-left: 187px;}
+        .cancel input:hover {text-decoration: underline;}
+    </style>
+</head>
+
+<body>
+    <form name="SignUp" method="post">
+        <div class="title">Регистрация</div>
+        <hr>
+        <div class="label">E-mail</div>
+        <div class="big_input">
+            <input type="email" name="E-mail" required placeholder="example@site.domain">
+        </div>
+        <div class="small_input">
+            <div class="label">Пароль</div>
+            <input type="password" name="Password" required minlength=6 placeholder="password">
+        </div>
+        <div class="reenter_pass">
+            <div class="label">Повторите пароль</div>
+            <input type="password" name="Reentered_Password" required minlength=6 maxlength=20 placeholder="password">
+        </div>
+        <div class="label">ФИО</div>
+        <div class="big_input">
+            <input type="text" name="Name" required placeholder="Игорев Игорь Игоревич">
+        </div>
+        <div class="small_input">
+            <div class="label">Возраст</div>
+            <input type="number" min=0 max=200 name="Age" required placeholder="18">
+        </div>
+        <hr>
+        <div class="send">
+            <input type="submit" name="Submit" value="Отправить">
+        </div>
+        <div class="cancel">
+            <input type="reset" name="Reset" value="Отмена">
+        </div>
+    </form>
+</body>
+
+</html>
